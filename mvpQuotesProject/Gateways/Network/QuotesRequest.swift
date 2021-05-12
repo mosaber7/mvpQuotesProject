@@ -10,17 +10,20 @@ import Alamofire
 
 class QuotesRequest{
     
-    func retrieveAllQuotes(){
+    func retrieveAllQuotes(_ compeltion: @escaping (Result<[Quote], AFError>)-> Void){
         let getAllQuotesRoute = QuotesRouter.allQoutes
-        AF.request(getAllQuotesRoute).responseJSON { (responce) in
+        
+        AF.request(getAllQuotesRoute).responseDecodable { (responce: DataResponse<[Quote], AFError>) in
             switch responce.result{
-            case .success(let data):
-                print(data)
+            case .success(let quotes):
+                compeltion(.success(quotes))
             case .failure(let error):
-                print(error)
+                compeltion(.failure(error))
+                
             }
-            
         }
+        
+       
         
     }
     

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,7 @@
 		053B5596264C78C700972633 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 053B5594264C78C700972633 /* LaunchScreen.storyboard */; };
 		053B55A1264C79EC00972633 /* QuotesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053B55A0264C79EC00972633 /* QuotesRouter.swift */; };
 		053B55A5264C7A3000972633 /* QuotesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053B55A4264C7A3000972633 /* QuotesRequest.swift */; };
+		053B55B1264C918500972633 /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053B55B0264C918500972633 /* Quote.swift */; };
 		B7F5450EC080B08C0D8AFB4E /* Pods_mvpQuotesProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5970EF019D8FD9AB7444D0D /* Pods_mvpQuotesProject.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +30,7 @@
 		053B5597264C78C800972633 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		053B55A0264C79EC00972633 /* QuotesRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesRouter.swift; sourceTree = "<group>"; };
 		053B55A4264C7A3000972633 /* QuotesRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesRequest.swift; sourceTree = "<group>"; };
+		053B55B0264C918500972633 /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
 		61D30DFEC6E7B260316EAE8D /* Pods-mvpQuotesProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mvpQuotesProject.debug.xcconfig"; path = "Target Support Files/Pods-mvpQuotesProject/Pods-mvpQuotesProject.debug.xcconfig"; sourceTree = "<group>"; };
 		8C852DF117C27C0DCC922D4C /* Pods-mvpQuotesProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mvpQuotesProject.release.xcconfig"; path = "Target Support Files/Pods-mvpQuotesProject/Pods-mvpQuotesProject.release.xcconfig"; sourceTree = "<group>"; };
 		F5970EF019D8FD9AB7444D0D /* Pods_mvpQuotesProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mvpQuotesProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -67,6 +69,7 @@
 		053B5588264C78C600972633 /* mvpQuotesProject */ = {
 			isa = PBXGroup;
 			children = (
+				053B55AF264C916E00972633 /* Models */,
 				053B559E264C78E300972633 /* Gateways */,
 				053B5589264C78C600972633 /* AppDelegate.swift */,
 				053B558B264C78C600972633 /* SceneDelegate.swift */,
@@ -96,6 +99,14 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
+		053B55AF264C916E00972633 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				053B55B0264C918500972633 /* Quote.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		78614DE3FB7BA727FCC297DC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -110,7 +121,6 @@
 				61D30DFEC6E7B260316EAE8D /* Pods-mvpQuotesProject.debug.xcconfig */,
 				8C852DF117C27C0DCC922D4C /* Pods-mvpQuotesProject.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -232,6 +242,7 @@
 				053B55A5264C7A3000972633 /* QuotesRequest.swift in Sources */,
 				053B558A264C78C600972633 /* AppDelegate.swift in Sources */,
 				053B558C264C78C600972633 /* SceneDelegate.swift in Sources */,
+				053B55B1264C918500972633 /* Quote.swift in Sources */,
 				053B55A1264C79EC00972633 /* QuotesRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
