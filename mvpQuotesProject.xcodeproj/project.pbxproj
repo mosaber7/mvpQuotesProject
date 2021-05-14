@@ -19,6 +19,11 @@
 		053B55BE264CA3FC00972633 /* QuoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053B55BC264CA3FC00972633 /* QuoteCell.swift */; };
 		053B55BF264CA3FC00972633 /* QuoteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 053B55BD264CA3FC00972633 /* QuoteCell.xib */; };
 		053B55C2264CAC1000972633 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053B55C1264CAC1000972633 /* HomePresenter.swift */; };
+		05DFE4A0264EAE8F00184B1F /* QuoteDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DFE49F264EAE8F00184B1F /* QuoteDetailsViewController.swift */; };
+		05DFE4A3264EB01E00184B1F /* detailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DFE4A2264EB01E00184B1F /* detailsPresenter.swift */; };
+		05DFE4A9264EBEAF00184B1F /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DFE4A8264EBEAF00184B1F /* Route.swift */; };
+		05DFE4AD264EC05400184B1F /* UIVieewControl+NavExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DFE4AC264EC05400184B1F /* UIVieewControl+NavExtension.swift */; };
+		05DFE4B0264EC8E100184B1F /* HomeRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DFE4AF264EC8E100184B1F /* HomeRoutes.swift */; };
 		B7F5450EC080B08C0D8AFB4E /* Pods_mvpQuotesProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5970EF019D8FD9AB7444D0D /* Pods_mvpQuotesProject.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +42,11 @@
 		053B55BC264CA3FC00972633 /* QuoteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteCell.swift; sourceTree = "<group>"; };
 		053B55BD264CA3FC00972633 /* QuoteCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuoteCell.xib; sourceTree = "<group>"; };
 		053B55C1264CAC1000972633 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		05DFE49F264EAE8F00184B1F /* QuoteDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteDetailsViewController.swift; sourceTree = "<group>"; };
+		05DFE4A2264EB01E00184B1F /* detailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = detailsPresenter.swift; sourceTree = "<group>"; };
+		05DFE4A8264EBEAF00184B1F /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
+		05DFE4AC264EC05400184B1F /* UIVieewControl+NavExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIVieewControl+NavExtension.swift"; sourceTree = "<group>"; };
+		05DFE4AF264EC8E100184B1F /* HomeRoutes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRoutes.swift; sourceTree = "<group>"; };
 		61D30DFEC6E7B260316EAE8D /* Pods-mvpQuotesProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mvpQuotesProject.debug.xcconfig"; path = "Target Support Files/Pods-mvpQuotesProject/Pods-mvpQuotesProject.debug.xcconfig"; sourceTree = "<group>"; };
 		8C852DF117C27C0DCC922D4C /* Pods-mvpQuotesProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mvpQuotesProject.release.xcconfig"; path = "Target Support Files/Pods-mvpQuotesProject/Pods-mvpQuotesProject.release.xcconfig"; sourceTree = "<group>"; };
 		F5970EF019D8FD9AB7444D0D /* Pods_mvpQuotesProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mvpQuotesProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -75,6 +85,7 @@
 		053B5588264C78C600972633 /* mvpQuotesProject */ = {
 			isa = PBXGroup;
 			children = (
+				05DFE4A6264EBE8F00184B1F /* Components */,
 				053B55AF264C916E00972633 /* Models */,
 				053B559E264C78E300972633 /* Gateways */,
 				053B55B3264CA10200972633 /* Modules */,
@@ -128,6 +139,7 @@
 				053B55B7264CA3A800972633 /* DetailsCell */,
 				053B558D264C78C600972633 /* HomeViewController.swift */,
 				053B55C1264CAC1000972633 /* HomePresenter.swift */,
+				05DFE4AF264EC8E100184B1F /* HomeRoutes.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -135,6 +147,8 @@
 		053B55B5264CA12B00972633 /* QouteDetails */ = {
 			isa = PBXGroup;
 			children = (
+				05DFE49F264EAE8F00184B1F /* QuoteDetailsViewController.swift */,
+				05DFE4A2264EB01E00184B1F /* detailsPresenter.swift */,
 			);
 			path = QouteDetails;
 			sourceTree = "<group>";
@@ -146,6 +160,23 @@
 				053B55BD264CA3FC00972633 /* QuoteCell.xib */,
 			);
 			path = DetailsCell;
+			sourceTree = "<group>";
+		};
+		05DFE4A6264EBE8F00184B1F /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				05DFE4A7264EBE9A00184B1F /* Navigation */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		05DFE4A7264EBE9A00184B1F /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				05DFE4A8264EBEAF00184B1F /* Route.swift */,
+				05DFE4AC264EC05400184B1F /* UIVieewControl+NavExtension.swift */,
+			);
+			path = Navigation;
 			sourceTree = "<group>";
 		};
 		78614DE3FB7BA727FCC297DC /* Frameworks */ = {
@@ -280,13 +311,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05DFE4A0264EAE8F00184B1F /* QuoteDetailsViewController.swift in Sources */,
+				05DFE4A3264EB01E00184B1F /* detailsPresenter.swift in Sources */,
+				05DFE4A9264EBEAF00184B1F /* Route.swift in Sources */,
 				053B558E264C78C600972633 /* HomeViewController.swift in Sources */,
+				05DFE4AD264EC05400184B1F /* UIVieewControl+NavExtension.swift in Sources */,
 				053B55A5264C7A3000972633 /* QuotesRequest.swift in Sources */,
 				053B558A264C78C600972633 /* AppDelegate.swift in Sources */,
 				053B558C264C78C600972633 /* SceneDelegate.swift in Sources */,
 				053B55BE264CA3FC00972633 /* QuoteCell.swift in Sources */,
 				053B55B1264C918500972633 /* Quote.swift in Sources */,
 				053B55A1264C79EC00972633 /* QuotesRouter.swift in Sources */,
+				05DFE4B0264EC8E100184B1F /* HomeRoutes.swift in Sources */,
 				053B55C2264CAC1000972633 /* HomePresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
