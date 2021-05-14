@@ -24,12 +24,12 @@ import Foundation
 },
  */
 struct Quote: Decodable{
-    var author: String
-    var qouteString: String
-    
-    enum CodingKeys: String, CodingKey{
+    let author: String
+    let quote: String
+
+    enum CodingKeys: String, CodingKey {
         case author = "a"
-        case qouteString = "q"
+        case quote = "q"
     }
     
 }

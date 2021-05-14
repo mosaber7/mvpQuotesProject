@@ -7,27 +7,22 @@
 
 import UIKit
 
-protocol viewProtocol: AnyObject {
-    
+protocol viewProtocol: NavigationRoute,AnyObject {
+    func refresh()
 }
 
 class HomeViewController: UIViewController {
 
     @IBOutlet private weak var quotesTableView: UITableView!
     
+    var presenter: presenterProtocol?
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.presenter = HomePresenter(view: self)
+        
         configureCell()
-        let quotesRequest = QuotesRequest()
-        quotesRequest.retrieveAllQuotes{
-            responce in
-            switch responce{
-            case .success(let quotes):
-                print(quotes.count)
-            case .failure(let error):
-                print(error.errorDescription)
-            }
-        }
+        presenter?.retrieveQuotes()
+        
     }
 
 
@@ -43,11 +38,14 @@ extension HomeViewController{
 //MARK: -UITableView DAta Source configuration
 extension HomeViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        10
+        presenter?.quotesCount ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let cell = quotesTableView.dequeueReusableCell(withIdentifier: "quote") as? QuoteCell
+        let quote = presenter?.quote(at: indexPath.row) ?? ""
+        cell?.configureQuoteLabel(quote: quote)
+        return cell!
     }
     
     
@@ -58,7 +56,20 @@ extension HomeViewController: UITableViewDataSource{
 extension HomeViewController: UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        presenter?.selectQuote(at: indexPath.row)
     }
+}
+
+//MARK: -
+
+extension HomeViewController: viewProtocol{
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        self.presenter?.selectQuote(at: indexPath.row)
+    }
+    func refresh() {
+        quotesTableView.reloadData()
+    }
+    
+    
 }
 
